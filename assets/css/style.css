@@ -1,0 +1,408 @@
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Setup
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */ 
+
+
+/* Connecting CSS media queries to JS with dummy declaration
+   -------------------------------------------------------------------------- */
+/*
+  html { font-family: 'xs' }
+  @media (min-width: 768px) { html { font-family: 'sm' }}
+  @media (min-width: 990px) { html { font-family: 'md' }}
+  @media (min-width: 1200px){ html { font-family: 'lg' }}
+*/
+
+
+/* Windows Phone 8 and Device-Width fix
+   -------------------------------------------------------------------------- */
+
+/* http://timkadlec.com/2013/01/windows-phone-8-and-device-width */
+
+@-webkit-viewport{width:device-width}
+   @-moz-viewport{width:device-width}
+    @-ms-viewport{width:device-width}
+     @-o-viewport{width:device-width}
+        @viewport{width:device-width}
+
+
+/* Google maps user controls fix
+   -------------------------------------------------------------------------- */
+
+/*
+  #google-map img {
+    max-width: none;
+    width: auto;
+  }
+*/
+
+
+/* Fonts
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('../fonts/OpenSans-Regular-webfont.eot');
+  src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
+       url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+       url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sanssemibold';
+  src: url('../fonts/OpenSans-Semibold-webfont.eot');
+  src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+       url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+       url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Basic
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */ 
+
+
+/* #Basic - Default tags
+   -------------------------------------------------------------------------- */
+
+body {
+  min-width: 280px;
+  font-family: "open_sansregular", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #131d26;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "open_sanssemibold", "Helvetica Neue", Helvetica, arial, sans-serif;
+  line-height: 1.2;
+  color: #162b4a;
+  font-weight: normal;
+  font-style: normal;
+}
+
+strong, b {
+  font-family: "open_sanssemibold", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+i, em {
+  font-family: "open_sansregular", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+ul, ol {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #6b4bb9;
+}
+
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: #4f309a;
+}
+
+
+/* #Basic - Bootstrap overwrite
+   -------------------------------------------------------------------------- */
+
+@media(min-width: 1200px){
+  .container {
+    width: 1070px;
+  }
+}
+
+/* buttons */
+
+.btn {
+  border-radius: 0;  
+}
+
+/* dropdowns */
+
+.dropdown-menu {
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Icons
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */
+
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.icon-right {
+  margin-right: 0;
+  margin-left: 10px;
+}
+
+.icon.icon-envelope       { background-image: url(../icons/envelope-open.svg)}
+.icon.icon-phone          { background-image: url(../icons/phone.svg)}
+.icon.icon-map            { background-image: url(../icons/map.svg)}
+
+/* fallback */
+
+.no-svg .icon.icon-envelope       { background-image: url(../icons/envelope-open.png)}
+.no-svg .icon.icon-phone          { background-image: url(../icons/phone.png)}
+.no-svg .icon.icon-map            { background-image: url(../icons/map.png)}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Modules
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */
+
+
+/* #Modules - Various stuff
+   -------------------------------------------------------------------------- */
+
+.small {
+  font-size: 85%;
+}
+
+.skew {
+  -webkit-transform: skewX(20deg);
+     -moz-transform: skewX(20deg);
+      -ms-transform: skewX(20deg);
+       -o-transform: skewX(20deg);
+          transform: skewX(20deg);
+}
+
+.unskew {
+  -webkit-transform: skewX(-20deg);
+     -moz-transform: skewX(-20deg);
+      -ms-transform: skewX(-20deg);
+       -o-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+}
+
+
+/* #Modules - Call to Action button
+   -------------------------------------------------------------------------- */
+
+.btn.btn-cta {
+  border-color: #4f3986;
+  color: #fff;
+  background-color: #6b4bb9;
+}
+
+.btn.btn-cta:hover, 
+.btn.btn-cta:focus, 
+.btn.btn-cta:active, 
+.btn.btn-cta.active, 
+.open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #3b4ee9;
+}
+
+
+/* #Modules - Intro
+   -------------------------------------------------------------------------- */
+
+.intro {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.intro h1,
+.intro h2,
+.intro h3 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.intro h1 + p,
+.intro h2 + p,
+.intro h3 + p {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.5;
+  font-family: "open_sanslight", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Backgrounds
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */
+
+
+html { 
+  background: #eaeaea;
+}
+
+@media(min-width: 768px){
+  html { 
+    background: url(../img/bg.jpg) no-repeat center top #eaeaea;
+  }
+}
+
+body { 
+  background: transparent; 
+}
+
+.white-bg {
+  background: #fff;
+}
+
+.pattern-background {
+  background: url(../img/pattenr-bg.jpg) top left repeat;
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Header
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */
+
+
+.header {
+  height: 60px;
+}
+
+@media(min-width: 768px){
+  .header {
+    height: 90px;
+  }
+}
+
+@media(min-width: 992px){
+  .header {
+    height: 110px;
+  }
+}
+
+
+/* #Header - Logo
+   -------------------------------------------------------------------------- */
+
+.logo {
+  display: block;
+  width: 120px;
+  height: 85%;
+  background: url(../img/logo.svg) left center no-repeat;
+  background-size: 100% auto;
+}
+
+@media(min-width: 768px){
+  .logo {
+    width: 160px;
+    margin: 0;
+  }
+}
+
+/* fallback */
+
+.no-svg .logo {
+  background: url(../img/logo.png) left center no-repeat;
+  background-size: auto;
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Landing page
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */
+
+
+.landing {
+
+}
+
+
+/* #Landing - Big picture
+   -------------------------------------------------------------------------- */
+
+.landing-big-picture {
+
+}
+
+
+/* #Landing - Form
+   -------------------------------------------------------------------------- */
+
+.landing-form {
+
+}
+
+
+
+
+/* --------------------------------------------------------------------------
+   //////////////////////////////////////////////////////////////////////////
+
+   #Another big block or page
+
+   //////////////////////////////////////////////////////////////////////////
+   -------------------------------------------------------------------------- */
+
+.another-big-block-or-page {
+
+}
+
+/* and so on... */
